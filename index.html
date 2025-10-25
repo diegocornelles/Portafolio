@@ -1,11 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi Portafolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Cornelles | Cybersecurity Portfolio</title>
+    <meta name="description" content="Portfolio de ciberseguridad de Diego Cornelles - Estudiante especializado en pentesting y seguridad informática">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>¡Hola! Mi portafolio ya está en Vercel 🚀</h1>
-  <p>Deploy realizado correctamente.</p>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="terminal-prompt">root@diego:~$</span>
+            </div>
+            <div class="nav-controls">
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="es">ES</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="ca">CA</button>
+                </div>
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="terminal-btn red"></span>
+                            <span class="terminal-btn yellow"></span>
+                            <span class="terminal-btn green"></span>
+                        </div>
+                        <div class="terminal-title">terminal@diego</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="prompt">root@kali:~$</span>
+                            <span class="command">whoami</span>
+                        </div>
+                        <div class="terminal-output" data-i18n="hero.terminal.whoami">
+                            Diego Cornelles - Estudiante de Ciberseguridad
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">root@kali:~$</span>
+                            <span class="command">cat especialidades.txt</span>
+                        </div>
+                        <div class="terminal-output">
+                            <span class="tech-tag">Kali Linux</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Bash</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">root@kali:~$</span>
+                            <span class="command typing-cursor">_</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-text">
+                    <h1 class="glitch" data-text="Diego Cornelles">Diego Cornelles</h1>
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">
+                        Estudiante de Ciberseguridad | En Prácticas
+                    </p>
+                    <p class="hero-description" data-i18n="hero.description">
+                        Apasionado por la seguridad informática, el pentesting y la protección de sistemas. 
+                        Explorando el mundo de la ciberseguridad con creatividad y profesionalismo.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#proyectos" class="btn btn--primary">
+                            <span data-i18n="hero.cta.projects">Ver Proyectos</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#contacto" class="btn btn--outline">
+                            <span data-i18n="hero.cta.contact">Contactar</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secciones futuras -->
+    <section id="proyectos" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="projects.title">Proyectos</h2>
+            <p class="section-subtitle" data-i18n="projects.subtitle">Contenido en desarrollo...</p>
+        </div>
+    </section>
+
+    <section id="contacto" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
+            <p class="section-subtitle" data-i18n="contact.subtitle">Contenido en desarrollo...</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
