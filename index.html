@@ -102,6 +102,213 @@
             </div>
         </div>
     </section>
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="section section-about">
+        <div class="container">
+            <h2 class="section-title" data-i18n="about.title">Sobre Mí</h2>
+            
+            <div class="about-content">
+                <!-- Avatar con efecto Matrix -->
+                <div class="avatar-container">
+                    <div class="matrix-avatar">
+                        <canvas id="matrixCanvas"></canvas>
+                        <div class="avatar-overlay">
+                            <div class="avatar-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="avatar-status">
+                        <span class="status-dot"></span>
+                        <span data-i18n="about.status">Disponible para oportunidades</span>
+                    </div>
+                </div>
+
+                <!-- Biografía -->
+                <div class="about-text">
+                    <div class="bio-card">
+                        <div class="card-header">
+                            <span class="terminal-prompt">cat about.txt</span>
+                        </div>
+                        <div class="card-body">
+                            <p data-i18n="about.bio.p1">
+                                ¡Hola! Soy Diego, estudiante de segundo año de <strong>ASIX</strong> en el 
+                                <strong>Instituto Tecnológico de Barcelona</strong>. Actualmente estoy realizando 
+                                prácticas en <strong>Devoteam</strong>, donde aplico mis conocimientos en ciberseguridad 
+                                y administración de sistemas.
+                            </p>
+                            <p data-i18n="about.bio.p2">
+                                Mi recorrido empezó con el grado medio de <strong>SMR</strong>, donde descubrí mi 
+                                pasión por la seguridad informática. Ahora me especializo en pentesting, hardening 
+                                de sistemas y automatización con scripts.
+                            </p>
+                            <p data-i18n="about.bio.p3">
+                                Me encanta resolver CTFs, explorar vulnerabilidades y aprender constantemente sobre 
+                                nuevas técnicas de ataque y defensa. Mi objetivo es convertirme en un experto en 
+                                ciberseguridad ofensiva.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Información rápida -->
+                    <div class="quick-info">
+                        <div class="info-item">
+                            <span class="info-icon">🎓</span>
+                            <div>
+                                <div class="info-label" data-i18n="about.education">Formación</div>
+                                <div class="info-value">ASIX (2º) + SMR</div>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">💼</span>
+                            <div>
+                                <div class="info-label" data-i18n="about.current">Actualmente</div>
+                                <div class="info-value">Prácticas en Devoteam</div>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <div>
+                                <div class="info-label" data-i18n="about.location">Ubicación</div>
+                                <div class="info-value">Barcelona, España</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Habilidades -->
+    <section id="habilidades" class="section section-skills">
+        <div class="container">
+            <h2 class="section-title" data-i18n="skills.title">Habilidades Técnicas</h2>
+            <p class="section-subtitle" data-i18n="skills.subtitle">Tecnologías y herramientas que domino</p>
+
+            <div class="skills-grid">
+                <!-- Pentesting & Seguridad -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-icon">🛡️</span>
+                        <h3 data-i18n="skills.category.pentest">Pentesting & Seguridad</h3>
+                    </div>
+                    <div class="category-terminal">
+                        <div class="terminal-line">
+                            <span class="prompt">root@kali:~$</span>
+                            <span class="command">ls -la /skills/security/</span>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag">Kali Linux</span>
+                            <span class="skill-tag">Metasploit</span>
+                            <span class="skill-tag">Nmap</span>
+                            <span class="skill-tag">Burp Suite</span>
+                            <span class="skill-tag">Wireshark</span>
+                            <span class="skill-tag">OWASP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Redes -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-icon">🌐</span>
+                        <h3 data-i18n="skills.category.network">Redes & Infraestructura</h3>
+                    </div>
+                    <div class="category-terminal">
+                        <div class="terminal-line">
+                            <span class="prompt">root@kali:~$</span>
+                            <span class="command">cat /etc/networks.conf</span>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag">TCP/IP</span>
+                            <span class="skill-tag">DNS</span>
+                            <span class="skill-tag">VPN</span>
+                            <span class="skill-tag">Firewall</span>
+                            <span class="skill-tag">Routing</span>
+                            <span class="skill-tag">VLAN</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sistemas -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-icon">💻</span>
+                        <h3 data-i18n="skills.category.systems">Sistemas Operativos</h3>
+                    </div>
+                    <div class="category-terminal">
+                        <div class="terminal-line">
+                            <span class="prompt">root@kali:~$</span>
+                            <span class="command">uname -a && systeminfo</span>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">Windows Server</span>
+                            <span class="skill-tag">Active Directory</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">VMware</span>
+                            <span class="skill-tag">Apache/Nginx</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programación -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-icon">⚡</span>
+                        <h3 data-i18n="skills.category.programming">Programación & Scripting</h3>
+                    </div>
+                    <div class="category-terminal">
+                        <div class="terminal-line">
+                            <span class="prompt">root@kali:~$</span>
+                            <span class="command">which python bash php</span>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Bash</span>
+                            <span class="skill-tag">PowerShell</span>
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">HTML/CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificaciones -->
+            <div class="certifications">
+                <h3 class="cert-title" data-i18n="skills.certs.title">📜 Certificaciones</h3>
+                <div class="cert-list">
+                    <div class="cert-item">
+                        <span class="cert-badge">✓</span>
+                        <span data-i18n="skills.certs.smr">Técnico en Sistemas Microinformáticos y Redes (SMR)</span>
+                    </div>
+                    <div class="cert-item cert-progress">
+                        <span class="cert-badge">⏳</span>
+                        <span data-i18n="skills.certs.asix">Técnico Superior en Administración de Sistemas (ASIX) - En curso</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secciones futuras (mantener) -->
+    <section id="proyectos" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="projects.title">Proyectos</h2>
+            <p class="section-subtitle" data-i18n="projects.subtitle">Contenido en desarrollo...</p>
+        </div>
+    </section>
+
+    <section id="contacto" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
+            <p class="section-subtitle" data-i18n="contact.subtitle">Contenido en desarrollo...</p>
+        </div>
+    </section>
 
     <!-- Secciones futuras -->
     <section id="proyectos" class="section">
