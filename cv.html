@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV y Contacto | Diego Cornelles</title>
+    <meta name="description" content="Descarga y visualiza el CV de Diego Cornelles. Contacta fácilmente por correo.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+</head>
+<body>
+    <!-- Menú simple de navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html"><span class="terminal-prompt">root@diego:~$</span> Portfolio</a>
+            </div>
+            <div class="nav-controls">
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="es">ES</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="ca">CA</button>
+                </div>
+                <a href="cv.html" class="btn btn--primary">CV / Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section-cv">
+        <div class="container">
+            <!-- CV Visualizer -->
+            <div class="cv-dashboard" data-aos="fade-up">
+                <h2 class="section-title" data-i18n="cv.title">Mi Currículum Vitae</h2>
+                <div class="cv-view">
+                    <iframe src="URL_DE_TU_PDF_AQUI" width="100%" height="400" class="cv-pdf"></iframe>
+                    <div class="cv-qr">
+                        <img src="URL_DE_TU_QR_AQUI" alt="QR CV" width="160" height="160">
+                        <span data-i18n="cv.qr">Escanéame para ver el CV online</span>
+                    </div>
+                    <a href="URL_DE_TU_PDF_AQUI" download class="btn btn--primary" data-i18n="cv.download">Descargar PDF</a>
+                </div>
+            </div>
+
+            <!-- Formulario de contacto -->
+            <div class="contact-dashboard" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="section-title" data-i18n="contact.title">Contacto Directo</h2>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-field">
+                        <label for="name" data-i18n="form.name">Nombre</label>
+                        <input type="text" id="name" name="name" required autocomplete="name">
+                    </div>
+                    <div class="form-field">
+                        <label for="email" data-i18n="form.email">Email</label>
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                    </div>
+                    <div class="form-field">
+                        <label for="message" data-i18n="form.message">Mensaje</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary" data-i18n="form.send">Enviar</button>
+                </form>
+                <div id="formStatus"></div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      // Simple EmailJS integration
+      document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Desactivar botón
+        const btn = this.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = "Enviando...";
+
+        // EmailJS code aquí (deberás poner tu userID/ServiceID/templateID)
+        // emailjs.send("service_xxx","template_xxx",{
+        //   from_name: document.getElementById("name").value,
+        //   reply_to: document.getElementById("email").value,
+        //   message: document.getElementById("message").value,
+        // })
+        // .then(() => {
+        //   document.getElementById("formStatus").textContent = "Mensaje enviado correctamente.";
+        //   btn.disabled = false;
+        //   btn.textContent = "Enviar";
+        // }, () => {
+        //   document.getElementById("formStatus").textContent = "Error al enviar el mensaje.";
+        //   btn.disabled = false;
+        //   btn.textContent = "Enviar";
+        // });
+
+        // Demo (sin EmailJS)
+        setTimeout(() => {
+          document.getElementById("formStatus").textContent = "Mensaje enviado correctamente (demo).";
+          btn.disabled = false;
+          btn.textContent = "Enviar";
+        }, 1200);
+      });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
