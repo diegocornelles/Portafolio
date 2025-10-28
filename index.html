@@ -1,391 +1,422 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diego Cornelles | Cybersecurity Portfolio</title>
-    <meta name="description" content="Portfolio de ciberseguridad de Diego Cornelles - Estudiante especializado en pentesting y seguridad informática">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diego Cornelles | Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Navegación -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <span class="terminal-prompt">root@diego:~$</span>
-            </div>
-            <div class="nav-controls">
-                <div class="language-selector">
-                    <button class="lang-btn active" data-lang="es">ES</button>
-                    <button class="lang-btn" data-lang="en">EN</button>
-                    <button class="lang-btn" data-lang="ca">CA</button>
-                </div>
-                <!-- OPCIÓN 1: Botón tradicional -->
-                <a href="cv.html" class="btn btn--primary">CV / Contacto</a>
-            </div>
+  <!-- Navegación -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-brand">
+        <span class="terminal-prompt">root@diego:~$</span>
+      </div>
+      <div class="nav-controls">
+        <div class="language-selector">
+          <button class="lang-btn active" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ca">CA</button>
         </div>
-    </nav>
-
-    <!-- Hero Section (decorada con funcionalidad terminal) -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="terminal-window">
-                    <div class="terminal-header">
-                        <div class="terminal-buttons">
-                            <span class="terminal-btn red"></span>
-                            <span class="terminal-btn yellow"></span>
-                            <span class="terminal-btn green"></span>
-                        </div>
-                        <div class="terminal-title">terminal@diego</div>
-                    </div>
-                    <div class="terminal-body">
-                        <div class="terminal-line">
-                            <span class="prompt">root@kali:~$</span>
-                            <span class="command">whoami</span>
-                        </div>
-                        <div class="terminal-output" data-i18n="hero.terminal.whoami">
-                            Diego Cornelles - Estudiante de Ciberseguridad
-                        </div>
-                        <div class="terminal-line">
-                            <span class="prompt">root@kali:~$</span>
-                            <span class="command">cat especialidades.txt</span>
-                        </div>
-                        <div class="terminal-output">
-                            <span class="tech-tag">Kali Linux</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Bash</span>
-                        </div>
-                        <!-- OPCIÓN 2: Input Terminal interactivo -->
-                        <div class="terminal-line">
-                            <span class="prompt">root@kali:~$</span>
-                            <form id="terminal-cmd-form" style="display:inline;">
-                                <input id="terminal-cmd-input" type="text" autocomplete="off"
-                                    placeholder="Escribe un comando..." style="background:none;color:inherit;border:none;outline:none;width:110px;">
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!-- ... resto del hero ... -->
-                <div class="hero-text">
-                    <h1 class="glitch" data-text="Diego Cornelles">Diego Cornelles</h1>
-                    <p class="hero-subtitle" data-i18n="hero.subtitle">
-                        Estudiante de Ciberseguridad | En Prácticas
-                    </p>
-                    <p class="hero-description" data-i18n="hero.description">
-                        Apasionado por la seguridad informática, el pentesting y la protección de sistemas. 
-                        Explorando el mundo de la ciberseguridad con creatividad y profesionalismo.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#proyectos" class="btn btn--primary">
-                            <span data-i18n="hero.cta.projects">Ver Proyectos</span>
-                        </a>
-                        <a href="#contacto" class="btn btn--outline">
-                            <span data-i18n="hero.cta.contact">Contactar</span>
-                        </a>
-                        <!-- Puedes poner aquí otro link normal si lo prefieres -->
-                        <a href="cv.html" class="btn btn--primary">CV / Contacto</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ...otras secciones... -->
-
-    <script src="script.js"></script>
-</body>
-</html>
-
-    <!-- Sección Sobre Mí -->
-    <section id="sobre-mi" class="section section-about">
-        <div class="container">
-            <h2 class="section-title" data-i18n="about.title">Sobre Mí</h2>
-            
-            <div class="about-content">
-                <!-- Avatar con efecto Matrix -->
-                <div class="avatar-container">
-                    <div class="matrix-avatar">
-                        <canvas id="matrixCanvas"></canvas>
-                        <div class="avatar-overlay">
-                            <div class="avatar-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="12" cy="7" r="4"></circle>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="avatar-status">
-                        <span class="status-dot"></span>
-                        <span data-i18n="about.status">Disponible para oportunidades</span>
-                    </div>
-                </div>
-
-                <!-- Biografía -->
-                <div class="about-text">
-                    <div class="bio-card">
-                        <div class="card-header">
-                            <span class="terminal-prompt">cat about.txt</span>
-                        </div>
-                        <div class="card-body">
-                            <p data-i18n="about.bio.p1">
-                                ¡Hola! Soy Diego, estudiante de segundo año de <strong>ASIX</strong> en el 
-                                <strong>Instituto Tecnológico de Barcelona</strong>. Actualmente estoy realizando 
-                                prácticas en <strong>Devoteam</strong>, donde aplico mis conocimientos en ciberseguridad 
-                                y administración de sistemas.
-                            </p>
-                            <p data-i18n="about.bio.p2">
-                                Mi recorrido empezó con el grado medio de <strong>SMR</strong>, donde descubrí mi 
-                                pasión por la seguridad informática. Ahora me especializo en pentesting, hardening 
-                                de sistemas y automatización con scripts.
-                            </p>
-                            <p data-i18n="about.bio.p3">
-                                Me encanta resolver CTFs, explorar vulnerabilidades y aprender constantemente sobre 
-                                nuevas técnicas de ataque y defensa. Mi objetivo es convertirme en un experto en 
-                                ciberseguridad ofensiva.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Información rápida -->
-                    <div class="quick-info">
-                        <div class="info-item">
-                            <span class="info-icon">🎓</span>
-                            <div>
-                                <div class="info-label" data-i18n="about.education">Formación</div>
-                                <div class="info-value">ASIX (2º) + SMR</div>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">💼</span>
-                            <div>
-                                <div class="info-label" data-i18n="about.current">Actualmente</div>
-                                <div class="info-value">Prácticas en Devoteam</div>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">📍</span>
-                            <div>
-                                <div class="info-label" data-i18n="about.location">Ubicación</div>
-                                <div class="info-value">Barcelona, España</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Habilidades -->
-    <section id="habilidades" class="section section-skills">
-        <div class="container">
-            <h2 class="section-title" data-i18n="skills.title">Habilidades Técnicas</h2>
-            <p class="section-subtitle" data-i18n="skills.subtitle">Tecnologías y herramientas que domino</p>
-
-            <div class="skills-grid">
-                <!-- Pentesting & Seguridad -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <span class="category-icon">🛡️</span>
-                        <h3 data-i18n="skills.category.pentest">Pentesting & Seguridad</h3>
-                    </div>
-                    <div class="category-terminal">
-                        <div class="terminal-line">
-                            <span class="prompt">root@kali:~$</span>
-                            <span class="command">ls -la /skills/security/</span>
-                        </div>
-                        <div class="skills-list">
-                            <span class="skill-tag">Kali Linux</span>
-                            <span class="skill-tag">Metasploit</span>
-                            <span class="skill-tag">Nmap</span>
-                            <span class="skill-tag">Burp Suite</span>
-                            <span class="skill-tag">Wireshark</span>
-                            <span class="skill-tag">OWASP</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Redes -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <span class="category-icon">🌐</span>
-                        <h3 data-i18n="skills.category.network">Redes & Infraestructura</h3>
-                    </div>
-                    <div class="category-terminal">
-                        <div class="terminal-line">
-                            <span class="prompt">root@kali:~$</span>
-                            <span class="command">cat /etc/networks.conf</span>
-                        </div>
-                        <div class="skills-list">
-                            <span class="skill-tag">TCP/IP</span>
-                            <span class="skill-tag">DNS</span>
-                            <span class="skill-tag">VPN</span>
-                            <span class="skill-tag">Firewall</span>
-                            <span class="skill-tag">Routing</span>
-                            <span class="skill-tag">VLAN</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Sistemas -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <span class="category-icon">💻</span>
-                        <h3 data-i18n="skills.category.systems">Sistemas Operativos</h3>
-                    </div>
-                    <div class="category-terminal">
-                        <div class="terminal-line">
-                            <span class="prompt">root@kali:~$</span>
-                            <span class="command">uname -a && systeminfo</span>
-                        </div>
-                        <div class="skills-list">
-                            <span class="skill-tag">Linux</span>
-                            <span class="skill-tag">Windows Server</span>
-                            <span class="skill-tag">Active Directory</span>
-                            <span class="skill-tag">VirtualBox</span>
-                            <span class="skill-tag">Apache/Nginx</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Programación -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <span class="category-icon">⚡</span>
-                        <h3 data-i18n="skills.category.programming">Programación & Scripting</h3>
-                    </div>
-                    <div class="category-terminal">
-                        <div class="terminal-line">
-                            <span class="prompt">root@kali:~$</span>
-                            <span class="command">which python bash php</span>
-                        </div>
-                        <div class="skills-list">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Bash</span>
-                            <span class="skill-tag">PowerShell</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">HTML/CSS</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Certificaciones -->
-            <div class="certifications">
-                <h3 class="cert-title" data-i18n="skills.certs.title">📜 Certificaciones</h3>
-                <div class="cert-list">
-                    <div class="cert-item">
-                        <span class="cert-badge">✓</span>
-                        <span data-i18n="skills.certs.smr">Técnico en Sistemas Microinformáticos y Redes (SMR)</span>
-                    </div>
-                    <div class="cert-item cert-progress">
-                        <span class="cert-badge">⏳</span>
-                        <span data-i18n="skills.certs.asix">Técnico Superior en Administración de Sistemas (ASIX) - En curso</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Secciones futuras (mantener) -->
-   <section id="proyectos" class="section section-projects">
-  <div class="container">
-    <h2 class="section-title" data-i18n="projects.title">Proyectos</h2>
-    <p class="section-subtitle" data-i18n="projects.subtitle">Algunos ejemplos destacados</p>
-    
-    <!-- Filtro por tecnología -->
-    <div class="filter-dashboard">
-      <button class="filter-btn active" data-tech="all">Todos</button>
-      <button class="filter-btn" data-tech="Kali">Kali</button>
-      <button class="filter-btn" data-tech="Python">Python</button>
-      <button class="filter-btn" data-tech="Bash">Bash</button>
+        <!-- Botón tradicional al CV -->
+        <a href="cv.html" class="btn btn--primary">CV / Contacto</a>
+      </div>
     </div>
-    
-    <!-- Grid de proyectos -->
-    <div class="projects-grid">
-      <!-- Proyecto ejemplo 1 -->
-      <div class="project-card" data-tech="Kali Python">
-        <div class="project-header">
-          <img src="https://placehold.co/320x160/222/00ff41?text=CTF+Writeup" alt="CTF Writeup" class="project-img">
-          <h3 class="project-title">CTF Writeup Kali</h3>
-        </div>
-        <div class="project-body">
-          <p class="project-description">Resolución paso a paso de un reto CTF: Escalada de privilegios en Linux y explotación de vulnerabilidades reales.</p>
-          <div class="project-tags">
-            <span class="skill-tag">Kali</span>
-            <span class="skill-tag">Python</span>
+  </nav>
+
+  <!-- Hero Section con terminal decorativa -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <div class="terminal-buttons">
+              <span class="terminal-btn red"></span>
+              <span class="terminal-btn yellow"></span>
+              <span class="terminal-btn green"></span>
+            </div>
+            <div class="terminal-title">terminal@diego</div>
           </div>
-          <div class="project-links">
-            <a href="#" class="btn btn--outline">Demo</a>
-            <a href="#" target="_blank" class="btn btn--primary">GitHub</a>
-          </div>
-        </div>
-      </div>
-      <!-- Proyecto ejemplo 2 -->
-      <div class="project-card" data-tech="Python Bash">
-        <div class="project-header">
-          <img src="https://placehold.co/320x160/222/00ff41?text=Automatización+de+Scripts" alt="Automatización de Scripts" class="project-img">
-          <h3 class="project-title">Automatización de Scripts</h3>
-        </div>
-        <div class="project-body">
-          <p class="project-description">Colección de scripts en Bash y Python para automatizar tareas de hardening y análisis de logs en sistemas Linux.</p>
-          <div class="project-tags">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Bash</span>
-          </div>
-          <div class="project-links">
-            <a href="#" class="btn btn--outline">Demo</a>
-            <a href="#" target="_blank" class="btn btn--primary">GitHub</a>
-          </div>
-        </div>
-      </div>
-      <!-- Proyecto ejemplo 3 -->
-      <div class="project-card" data-tech="Bash">
-        <div class="project-header">
-          <img src="https://placehold.co/320x160/222/00ff41?text=Admin+de+Sistemas" alt="Admin de Sistemas" class="project-img">
-          <h3 class="project-title">Admin de Sistemas</h3>
-        </div>
-        <div class="project-body">
-          <p class="project-description">Gestión de usuarios, backups, y monitoreo con scripts Bash; automatización de tareas administrativas en servidores Linux.</p>
-          <div class="project-tags">
-            <span class="skill-tag">Bash</span>
-          </div>
-          <div class="project-links">
-            <a href="#" class="btn btn--outline">Demo</a>
-            <a href="#" target="_blank" class="btn btn--primary">GitHub</a>
+          <div class="terminal-body">
+
+            <div class="terminal-line">
+              <span class="prompt">root@kali:~$</span>
+              <span class="command">whoami</span>
+            </div>
+            <div class="terminal-output" data-i18n="hero.terminal.whoami">
+              Diego Cornelles - Estudiante de Ciberseguridad
+            </div>
+
+            <div class="terminal-line">
+              <span class="prompt">root@kali:~$</span>
+              <span class="command">cat especialidades.txt</span>
+            </div>
+            <div class="terminal-output">
+              <span class="tech-tag">Kali Linux</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Bash</span>
+            </div>
+
+            <!-- Terminal interactiva para comandos -->
+            <div class="terminal-line">
+              <span class="prompt">root@kali:~$</span>
+              <form id="terminal-cmd-form" style="display:inline;">
+                <input
+                  id="terminal-cmd-input"
+                  type="text"
+                  autocomplete="off"
+                  placeholder="Escribe un comando..."
+                  style="background:none;color:inherit;border:none;outline:none;width:110px;"
+                />
+              </form>
+            </div>
+
           </div>
         </div>
-      </div>
-      <!-- Proyecto ejemplo 4 -->
-      <div class="project-card" data-tech="Kali">
-        <div class="project-header">
-          <img src="https://placehold.co/320x160/222/00ff41?text=Recon+OSINT" alt="Recon OSINT" class="project-img">
-          <h3 class="project-title">Recon OSINT</h3>
-        </div>
-        <div class="project-body">
-          <p class="project-description">Herramientas y metodología de reconocimiento OSINT para investigación en Pentesting legal y recopilación de información.</p>
-          <div class="project-tags">
-            <span class="skill-tag">Kali</span>
-          </div>
-          <div class="project-links">
-            <a href="#" class="btn btn--outline">Demo</a>
-            <a href="#" target="_blank" class="btn btn--primary">GitHub</a>
+
+        <div class="hero-text">
+          <h1 class="glitch" data-text="Diego Cornelles">Diego Cornelles</h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Estudiante de Ciberseguridad | En Prácticas
+          </p>
+          <p class="hero-description" data-i18n="hero.description">
+            Apasionado por la seguridad informática, el pentesting y la protección
+            de sistemas.
+            Explorando el mundo de la ciberseguridad con creatividad y profesionalismo.
+          </p>
+          <div class="hero-actions">
+            <a href="#proyectos" class="btn btn--primary" >
+              <span data-i18n="hero.cta.projects">Ver Proyectos</span>
+            </a>
+            <a href="#contacto" class="btn btn--outline" >
+              <span data-i18n="hero.cta.contact">Contactar</span>
+            </a>
+            <!-- Otro link normal al CV -->
+            <a href="cv.html" class="btn btn--primary">CV / Contacto</a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Sobre Mí -->
+  <section id="sobre-mi" class="section section-about">
+    <div class="container">
+      <h2 class="section-title" data-i18n="about.title">Sobre Mí</h2>
 
-    <section id="contacto" class="section">
-        <div class="container">
-            <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
-            <p class="section-subtitle" data-i18n="contact.subtitle">Contenido en desarrollo...</p>
+      <div class="about-content">
+        <div class="avatar-container">
+          <div class="matrix-avatar">
+            <canvas id="matrixCanvas"></canvas>
+            <div class="avatar-overlay">
+              <div class="avatar-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="avatar-status">
+            <span class="status-dot"></span>
+            <span data-i18n="about.status">Disponible para oportunidades</span>
+          </div>
         </div>
-    </section>
 
-    <script src="script.js"></script>
+        <div class="about-text">
+          <div class="bio-card">
+            <div class="card-header">
+              <span class="terminal-prompt">cat about.txt</span>
+            </div>
+            <div class="card-body">
+              <p data-i18n="about.bio.p1">
+                ¡Hola! Soy Diego, estudiante de segundo año de <strong>ASIX</strong> en
+                el <strong>Instituto Tecnológico de Barcelona</strong>. Actualmente
+                estoy realizando prácticas en <strong>Devoteam</strong>, donde aplico
+                mis conocimientos en ciberseguridad y administración de sistemas.
+              </p>
+              <p data-i18n="about.bio.p2">
+                Mi recorrido empezó con el grado medio de <strong>SMR</strong>, donde descubrí
+                mi pasión por la seguridad informática. Ahora me especializo en pentesting,
+                hardening de sistemas y automatización con scripts.
+              </p>
+              <p data-i18n="about.bio.p3">
+                Me encanta resolver CTFs, explorar vulnerabilidades y aprender constantemente
+                sobre nuevas técnicas de ataque y defensa. Mi objetivo es convertirme en
+                un experto en ciberseguridad ofensiva.
+              </p>
+            </div>
+          </div>
+
+          <div class="quick-info">
+            <div class="info-item">
+              <span class="info-icon">🎓</span>
+              <div>
+                <div class="info-label" data-i18n="about.education">Formación</div>
+                <div class="info-value">ASIX (2º) + SMR</div>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">💼</span>
+              <div>
+                <div class="info-label" data-i18n="about.current">Actualmente</div>
+                <div class="info-value">Prácticas en Devoteam</div>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">📍</span>
+              <div>
+                <div class="info-label" data-i18n="about.location">Ubicación</div>
+                <div class="info-value">Barcelona, España</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Habilidades Técnicas -->
+  <section id="habilidades" class="section section-skills">
+    <div class="container">
+      <h2 class="section-title" data-i18n="skills.title">Habilidades Técnicas</h2>
+      <p class="section-subtitle" data-i18n="skills.subtitle">
+        Tecnologías y herramientas que domino
+      </p>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="category-header">
+            <span class="category-icon">🛡️</span>
+            <h3 data-i18n="skills.category.pentest">Pentesting & Seguridad</h3>
+          </div>
+          <div class="category-terminal">
+            <div class="terminal-line">
+              <span class="prompt">root@kali:~$</span>
+              <span class="command">ls -la /skills/security/</span>
+            </div>
+            <div class="skills-list">
+              <span class="skill-tag">Kali Linux</span>
+              <span class="skill-tag">Metasploit</span>
+              <span class="skill-tag">Nmap</span>
+              <span class="skill-tag">Burp Suite</span>
+              <span class="skill-tag">Wireshark</span>
+              <span class="skill-tag">OWASP</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="category-header">
+            <span class="category-icon">🌐</span>
+            <h3 data-i18n="skills.category.network">Redes & Infraestructura</h3>
+          </div>
+          <div class="category-terminal">
+            <div class="terminal-line">
+              <span class="prompt">root@kali:~$</span>
+              <span class="command">cat /etc/networks.conf</span>
+            </div>
+            <div class="skills-list">
+              <span class="skill-tag">TCP/IP</span>
+              <span class="skill-tag">DNS</span>
+              <span class="skill-tag">VPN</span>
+              <span class="skill-tag">Firewall</span>
+              <span class="skill-tag">Routing</span>
+              <span class="skill-tag">VLAN</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="category-header">
+            <span class="category-icon">💻</span>
+            <h3 data-i18n="skills.category.systems">Sistemas Operativos</h3>
+          </div>
+          <div class="category-terminal">
+            <div class="terminal-line">
+              <span class="prompt">root@kali:~$</span>
+              <span class="command">uname -a && systeminfo</span>
+            </div>
+            <div class="skills-list">
+              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">Windows Server</span>
+              <span class="skill-tag">Active Directory</span>
+              <span class="skill-tag">VirtualBox</span>
+              <span class="skill-tag">Apache/Nginx</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="category-header">
+            <span class="category-icon">⚡</span>
+            <h3 data-i18n="skills.category.programming">
+              Programación & Scripting
+            </h3>
+          </div>
+          <div class="category-terminal">
+            <div class="terminal-line">
+              <span class="prompt">root@kali:~$</span>
+              <span class="command">which python bash php</span>
+            </div>
+            <div class="skills-list">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Bash</span>
+              <span class="skill-tag">PowerShell</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">HTML/CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="certifications">
+        <h3 class="cert-title" data-i18n="skills.certs.title">📜 Certificaciones</h3>
+        <div class="cert-list">
+          <div class="cert-item">
+            <span class="cert-badge">✓</span>
+            <span data-i18n="skills.certs.smr"
+              >Técnico en Sistemas Microinformáticos y Redes (SMR)</span
+            >
+          </div>
+          <div class="cert-item cert-progress">
+            <span class="cert-badge">⏳</span>
+            <span data-i18n="skills.certs.asix"
+              >Técnico Superior en Administración de Sistemas (ASIX) - En curso</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos con filtro -->
+  <section id="proyectos" class="section section-projects">
+    <div class="container">
+      <h2 class="section-title" data-i18n="projects.title">Proyectos</h2>
+      <p class="section-subtitle" data-i18n="projects.subtitle">
+        Algunos ejemplos destacados
+      </p>
+
+      <div class="filter-dashboard">
+        <button class="filter-btn active" data-tech="all">Todos</button>
+        <button class="filter-btn" data-tech="Kali">Kali</button>
+        <button class="filter-btn" data-tech="Python">Python</button>
+        <button class="filter-btn" data-tech="Bash">Bash</button>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card" data-tech="Kali Python">
+          <div class="project-header">
+            <img
+              src="https://placehold.co/320x160/222/00ff41?text=CTF+Writeup"
+              alt="CTF Writeup"
+              class="project-img"
+            />
+            <h3 class="project-title">CTF Writeup Kali</h3>
+          </div>
+          <div class="project-body">
+            <p class="project-description">
+              Resolución paso a paso de un reto CTF: Escalada de privilegios en
+              Linux y explotación de vulnerabilidades reales.
+            </p>
+            <div class="project-tags">
+              <span class="skill-tag">Kali</span>
+              <span class="skill-tag">Python</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn--outline">Demo</a>
+              <a href="#" target="_blank" class="btn btn--primary">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-tech="Python Bash">
+          <div class="project-header">
+            <img
+              src="https://placehold.co/320x160/222/00ff41?text=Automatización+de+Scripts"
+              alt="Automatización de Scripts"
+              class="project-img"
+            />
+            <h3 class="project-title">Automatización de Scripts</h3>
+          </div>
+          <div class="project-body">
+            <p class="project-description">
+              Colección de scripts en Bash y Python para automatizar tareas de
+              hardening y análisis de logs en sistemas Linux.
+            </p>
+            <div class="project-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Bash</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn--outline">Demo</a>
+              <a href="#" target="_blank" class="btn btn--primary">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-tech="Bash">
+          <div class="project-header">
+            <img
+              src="https://placehold.co/320x160/222/00ff41?text=Admin+de+Sistemas"
+              alt="Admin de Sistemas"
+              class="project-img"
+            />
+            <h3 class="project-title">Admin de Sistemas</h3>
+          </div>
+          <div class="project-body">
+            <p class="project-description">
+              Gestión de usuarios, backups, y monitoreo con scripts Bash;
+              automatización de tareas administrativas en servidores Linux.
+            </p>
+            <div class="project-tags">
+              <span class="skill-tag">Bash</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn--outline">Demo</a>
+              <a href="#" target="_blank" class="btn btn--primary">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-tech="Kali">
+          <div class="project-header">
+            <img
+              src="https://placehold.co/320x160/222/00ff41?text=Recon+OSINT"
+              alt="Recon OSINT"
+              class="project-img"
+            />
+            <h3 class="project-title">Recon OSINT</h3>
+          </div>
+          <div class="project-body">
+            <p class="project-description">
+              Herramientas y metodología de reconocimiento OSINT para investigación
+              en Pentesting legal y recopilación de información.
+            </p>
+            <div class="project-tags">
+              <span class="skill-tag">Kali</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn--outline">Demo</a>
+              <a href="#" target="_blank" class="btn btn--primary">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Contacto vacía aún -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
+      <p class="section-subtitle" data-i18n="contact.subtitle">
+        Contenido en desarrollo...
+      </p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
