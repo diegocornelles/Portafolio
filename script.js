@@ -266,3 +266,28 @@ window.portfolioApp = {
   currentLang: () => currentLang,
   currentTheme: () => currentTheme
 };
+// ============================================
+// FILTRO DE PROYECTOS POR TECNOLOGÍA
+// ============================================
+function initProjectFilter() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+  
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tech = btn.dataset.tech;
+      // Actualizar botón activo
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      // Mostrar/ocultar proyectos según filtro
+      projectCards.forEach(card => {
+        if (tech === "all" || card.dataset.tech.includes(tech)) {
+          card.style.display = "flex";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+}
+document.addEventListener('DOMContentLoaded', initProjectFilter);
